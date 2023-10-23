@@ -22,6 +22,11 @@ nav {
   color: #7c6a0a;
   padding: 30px 80px;
 }
+@media screen and (max-width: 520px) {
+  nav {
+    padding: 30px 40px;
+  }
+}
 nav p {
   font-size: 1.5em;
 }
@@ -45,8 +50,21 @@ main article {
   flex-flow: wrap;
   padding: 0 80px 60px 80px;
 }
+@media screen and (max-width: 520px) {
+  main article {
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px 30px 40px;
+  }
+}
 main article .impact-section {
   width: 50%;
+}
+@media screen and (max-width: 520px) {
+  main article .impact-section {
+    width: 100%;
+    padding-bottom: 20px;
+  }
 }
 main article .impact-section h1 {
   color: #7c6a0a;
@@ -72,8 +90,18 @@ main article .impact-section button {
 main article .impact-section button:hover {
   transform: scale(1.1);
 }
+@media screen and (max-width: 520px) {
+  main article .img-section {
+    width: 100%;
+  }
+}
 main article .img-section img {
   width: 550px;
+}
+@media screen and (max-width: 520px) {
+  main article .img-section img {
+    width: 100%;
+  }
 }
 main h2 {
   color: #7c6a0a;
@@ -83,6 +111,11 @@ main h2 {
 }
 main section {
   padding: 0 80px;
+}
+@media screen and (max-width: 520px) {
+  main section {
+    padding: 0 40px;
+  }
 }
 main .first-column {
   display: flex;
@@ -165,6 +198,12 @@ main .about-us .mision-section .earth, main .about-us .mision-section .innovatio
   align-items: center;
   gap: 25px;
 }
+@media screen and (max-width: 520px) {
+  main .about-us .mision-section .earth, main .about-us .mision-section .innovation {
+    width: 100%;
+    flex-direction: column;
+  }
+}
 main .about-us .mision-section .earth img, main .about-us .mision-section .innovation img {
   width: 100px;
   height: 100px;
@@ -235,6 +274,11 @@ footer {
   padding: 40px 80px;
   gap: 20px;
   color: white;
+}
+@media screen and (max-width: 520px) {
+  footer {
+    padding: 30px 40px;
+  }
 }
 footer .social-media {
   display: flex;

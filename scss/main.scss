@@ -28,6 +28,18 @@ svg path {
     }
 }
 
+@mixin tablet {
+    @media screen and (max-width: 900px) {
+        @content
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width: 520px) {
+        @content
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -44,7 +56,9 @@ nav {
   @include flexcenter(row ,space-between ,center );
   color: $primary-text-color;
   padding: 30px 80px;
-
+  @include mobile() {
+    padding: 30px 40px;
+}
   p {
     font-size: 1.5em;
   }
@@ -61,8 +75,18 @@ main {
         @include flexcenter(row ,space-between ,flex-start );
         flex-flow: wrap;
         padding: 0 80px 60px 80px;
+        @include mobile() {
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px 30px 40px;
+        }
         .impact-section {
             width: 50%;
+            @include mobile() {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
             h1 {
                 color: $primary-text-color;
                 font-size: 60px;
@@ -89,8 +113,14 @@ main {
             }
         }
         .img-section {
+            @include mobile() {
+                width: 100%;
+            }
             img {
                 width: 550px;
+                @include mobile() {
+                    width: 100%;
+                }
             }
         }
     }
@@ -104,6 +134,9 @@ main {
 
     section {
         padding: 0 80px;
+        @include mobile() {
+            padding: 0 40px;
+        }
     }
 
     .first-column {
@@ -174,6 +207,10 @@ main {
                 display: flex;
                 align-items: center;
                 gap: 25px;
+                @include mobile() {
+                    width: 100%;
+                    flex-direction: column;
+                }
                 img {
                     width: 100px;
                     height: 100px;
@@ -243,6 +280,9 @@ footer {
   padding: 40px 80px;
   gap: 20px;
   color: white;
+  @include mobile() {
+    padding: 30px 40px;
+}
 
   .social-media {
     @include flexcenter(row,center ,center );
